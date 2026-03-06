@@ -16,7 +16,7 @@ const Home = () => {
           <li><Link to="/studentlogin">Student Login</Link></li>
         </ul>
 
-        <button className="register-btn">Register</button>
+        <Link to="/studentregister" className="register-btn">Register</Link>
       </nav>
 
       <section className="hero" id="home">
@@ -119,7 +119,7 @@ const Home = () => {
       <section className='cta'>
         <h2>Start Your Learning Journey Today</h2>
         <p>Join our digital library and explore unlimited books</p>
-        <button className='cta-btn'>Register Now</button>
+        <Link to="/studentregister" className="cta-btn">Register Now</Link>
       </section>
     </div>
   );

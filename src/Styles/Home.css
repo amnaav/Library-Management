@@ -3,10 +3,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 60px;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: stretch;
-    z-index: 10;
-    color: white;
+    z-index: 1000;
+    background-color: white;
+}
+.navbar .register-btn{
+    background-color: red;
 }
 .logo{
     font-size: 22px;
@@ -16,6 +21,11 @@
     display: flex;
     gap:30px;
     list-style:none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
 .nav-links li{
     cursor: pointer;
@@ -27,6 +37,8 @@
     border-radius: 6px;
     color: white;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
 }
 body{
     margin: 0;
@@ -142,11 +154,13 @@ body{
     padding:80px;
 }
 .cta-btn{
-    background:#ff8c2b;
-    border:none;
+    background: #ff8c2b;
+    border: none;
     padding:14px 30px;
-    font-size:18px;
-    margin-top:20px;
-    cursor:pointer;
-    color:white;
+    font-size: 18px;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
 }
