@@ -1,0 +1,46 @@
+import '../Styles/Dashboard.css'
+
+const StudentDashboard = () => {
+  return (
+    <div className='admin-container'>
+      <div className='sidebar'>
+        <h2 className='sidebar-logo'>📚 LMS</h2>
+        <ul className='sidebar-menu'>
+            <li>Dashboard</li>
+            <li>Browse Books</li>
+            <li>My Issued Books</li>
+            <li>Return Books</li>
+            <li>Profile</li>
+            <li>Logout</li>
+        </ul>
+      </div>
+      <div className='main-content'>
+        <h1>Student Dashboard</h1>
+        <div className='dashboard-cards'>
+            <div className='dash-card'>
+                <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="books"/>
+                <h3>Available Books</h3>
+                <p>5000+</p>
+            </div>
+            <div className='dash-card'>
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="issued"/>
+                <h3>My Issued Books</h3>
+                <p>3</p>
+            </div>
+            <div className='dash-card'>
+                <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="books"/>
+                <h3>Returned Books</h3>
+                <p>12</p>
+            </div>
+            <div className='dash-card'>
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="books"/>
+                <h3>Pending Fine</h3>
+                <p>₹0</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default StudentDashboard
