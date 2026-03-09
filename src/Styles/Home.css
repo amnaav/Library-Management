@@ -11,7 +11,7 @@
     background-color: white;
 }
 .navbar .register-btn{
-    background-color: red;
+    background-color: #ff8c2b;
 }
 .logo{
     font-size: 22px;
@@ -74,6 +74,11 @@ body{
 }
 .student-btn{
     background:white;
+    border: none;
+    padding:10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
 }
 .stats{
     display: flex;

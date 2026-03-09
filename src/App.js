@@ -9,6 +9,7 @@ import AddBook from "./Pages/AddBook";
 import ViewBooks from "./Pages/ViewBooks";
 import Students from "./Pages/Students";
 import IssueBooks from "./Pages/IssueBooks";
+import ReturnBook from "./Pages/ReturnBook";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/viewbooks" element={<ViewBooks/>}/>
         <Route path="/students" element={<Students/>}/>
         <Route path="/issuebook" element={<IssueBooks/>}/>
+        <Route path="/returnbook" element={<ReturnBook/>}/>
         <Route path="/studentdashboard" element={<StudentDashboard/>}/>
       </Routes>
     </BrowserRouter>

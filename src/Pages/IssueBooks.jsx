@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom"
 import "../Styles/Issuebook.css"
 
 const IssueBooks = () => {
+    const navigate = useNavigate()
+    const logout = () => (
+        navigate('/')
+    )
   return (
     <div>
         <div className="admin-container">
@@ -12,8 +17,8 @@ const IssueBooks = () => {
                 <li><a href='/viewbooks'>📖View Books</a></li>
                 <li><a href='/students'>👥Students</a></li>
                 <li><a href='/issuebook'>📕Issue Books</a></li>
-                <li><a href='/returnbooks'>↩Return Book</a></li>
-                <li>🚪Logout</li>
+                <li><a href='/returnbook'>↩Return Book</a></li>
+                <li onClick={logout}>🚪Logout</li>
             </ul>
         </div>
         <div className="main-content">

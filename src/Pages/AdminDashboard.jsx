@@ -17,7 +17,7 @@ const AdminDashboard = () => {
             <li><a href='/viewbooks'>📖View Books</a></li>
             <li><a href='/students'>👥Students</a></li>
             <li><a href='/issuebook'>📕Issue Books</a></li>
-            <li><a href='/returnbooks'>↩Return Book</a></li>
+            <li><a href='/returnbook'>↩Return Book</a></li>
             <li onClick={logout}>🚪Logout</li>
         </ul>
       </div>

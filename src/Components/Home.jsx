@@ -30,7 +30,7 @@ const Home = () => {
 
           <div className="hero-buttons">
             <button className="browse-btn">Browse books</button>
-            <button className="student-btn">Student Login</button>
+            <Link to="/studentregister" className="student-btn">Student Login</Link>
           </div>
         </div>
       </section>
