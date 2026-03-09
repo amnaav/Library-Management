@@ -1,17 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import "../Styles/Dashboard.css";
 
 const AdminDashboard = () => {
+    const navigate = useNavigate()
+    const logout = () => (
+        navigate('/')
+    )
   return (
     <div className="admin-container">
       <div className="sidebar">
         <h2 className="sidebar-logo">📚 LMS</h2>
         <ul className="sidebar-menu">
-            <li>Dashboard</li>
-            <li>Add Books</li>
-            <li>View Books</li>
-            <li>Students</li>
-            <li>Issue Books</li>
-            <li>Logout</li>
+            <li>📊Dashboard</li>
+            <li>📚Add Books</li>
+            <li>📖View Books</li>
+            <li>👥Students</li>
+            <li>📕Issue Books</li>
+            <li>↩Return Book</li>
+            <li onClick={logout}>🚪Logout</li>
         </ul>
       </div>
       <div className="main-content">
@@ -42,7 +48,7 @@ const AdminDashboard = () => {
             <div>
                 <h3>Categories</h3>
                 <p>50+</p>
-                </div>
+            </div>
         </div>
       </div>
     </div>
