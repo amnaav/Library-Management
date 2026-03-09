@@ -6,12 +6,12 @@ const StudentDashboard = () => {
       <div className='sidebar'>
         <h2 className='sidebar-logo'>📚 LMS</h2>
         <ul className='sidebar-menu'>
-            <li>Dashboard</li>
-            <li>Browse Books</li>
-            <li>My Issued Books</li>
-            <li>Return Books</li>
-            <li>Profile</li>
-            <li>Logout</li>
+            <li>📊 Dashboard</li>
+            <li>📚 Browse Books</li>
+            <li>📖 My Issued Books</li>
+            <li>↩ Return Books</li>
+            <li>👤 Profile</li>
+            <li>🚪 Logout</li>
         </ul>
       </div>
       <div className='main-content'>

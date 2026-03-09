@@ -5,6 +5,7 @@ import StudentRegister from "./Components/StudentRegister";
 import AdminLogin from "./Components/AdminLogin";
 import AdminDashboard from "./Pages/AdminDashboard";
 import StudentDashboard from "./Pages/StudentDashboard";
+import AddBook from "./Pages/AddBook";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/studentregister" element={<StudentRegister/>}/>
         <Route path="/adminlogin" element={<AdminLogin/>}/>
         <Route path="/admindashboard" element={<AdminDashboard/>}/>
+        <Route path="/addbook" element={<AddBook/>}/>
         <Route path="/studentdashboard" element={<StudentDashboard/>}/>
       </Routes>
     </BrowserRouter>

@@ -1,8 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/Dashboard.css";
+import "../Styles/AddBook.css";
 
 const AdminDashboard = () => {
     const navigate = useNavigate()
+    const Addbook = () =>(
+        navigate('/addbook')
+    )
     const logout = () => (
         navigate('/')
     )
@@ -12,7 +16,7 @@ const AdminDashboard = () => {
         <h2 className="sidebar-logo">📚 LMS</h2>
         <ul className="sidebar-menu">
             <li>📊Dashboard</li>
-            <li>📚Add Books</li>
+            <li onClick={Addbook}>📚Add Books</li>
             <li>📖View Books</li>
             <li>👥Students</li>
             <li>📕Issue Books</li>
