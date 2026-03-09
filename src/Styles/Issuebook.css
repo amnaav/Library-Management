@@ -54,6 +54,11 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.add-book-form select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 .add-book-form input{
     padding: 10px;
     border-radius: 5px;

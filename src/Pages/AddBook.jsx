@@ -6,12 +6,12 @@ const AddBook = () => {
             <div className="sidebar">
                 <h2 className="sidebar-logo">📚 LMS</h2>
                 <ul className="sidebar-menu">
-                    <li>📊Dashboard</li>
-                    <li onClick={'/AddBook'}>📚Add Books</li>
-                    <li>📖View Books</li>
-                    <li>👥Students</li>
-                    <li>📕Issue Books</li>
-                    <li>↩Return Book</li>
+                    <li><a href='/admindashboard'>📊Dashboard</a></li>
+                    <li><a href='/addbook'>📚Add Books</a></li>
+                    <li><a href='/viewbooks'>📖View Books</a></li>
+                    <li><a href='/students'>👥Students</a></li>
+                    <li><a href='/issuebook'>📕Issue Books</a></li>
+                    <li><a href='/returnbooks'>↩Return Book</a></li>
                     <li>🚪Logout</li>
                 </ul>
             </div>

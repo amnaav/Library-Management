@@ -1,12 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "../Styles/Dashboard.css";
 import "../Styles/AddBook.css";
 
 const AdminDashboard = () => {
     const navigate = useNavigate()
-    const Addbook = () =>(
-        navigate('/addbook')
-    )
     const logout = () => (
         navigate('/')
     )
@@ -15,12 +12,12 @@ const AdminDashboard = () => {
       <div className="sidebar">
         <h2 className="sidebar-logo">📚 LMS</h2>
         <ul className="sidebar-menu">
-            <li>📊Dashboard</li>
-            <li onClick={Addbook}>📚Add Books</li>
-            <li>📖View Books</li>
-            <li>👥Students</li>
-            <li>📕Issue Books</li>
-            <li>↩Return Book</li>
+            <li><a href='/admindashboard'>📊Dashboard</a></li>
+            <li><a href='/addbook'>📚Add Books</a></li>
+            <li><a href='/viewbooks'>📖View Books</a></li>
+            <li><a href='/students'>👥Students</a></li>
+            <li><a href='/issuebook'>📕Issue Books</a></li>
+            <li><a href='/returnbooks'>↩Return Book</a></li>
             <li onClick={logout}>🚪Logout</li>
         </ul>
       </div>

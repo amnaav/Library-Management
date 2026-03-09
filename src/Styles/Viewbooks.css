@@ -26,10 +26,6 @@
     border-radius: 6px;
     transition: 0.3s;
 }
-.sidebar-menu li a{
-    text-decoration: none;
-    color: white;
-}
 .sidebar-menu li:hover{
     background: #374151;
 }
@@ -39,32 +35,40 @@
     background: #f4f4f4;
     margin-left: 260px;
 }
-.form-container{
+.book-table{
+    width:100%;
+    border-collapse: collapse;
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
+    background:white;
 }
-.add-book-form{
-    background: white;
-    padding: 30px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.add-book-form input{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.add-book-form button{
+
+.book-table th,
+.book-table td{
     padding: 12px;
-    background: #ff8c2b;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.book-table th{
+    background:#1f2937;
+    color:white;
+}
+
+.edit-btn{
+    background:#3b82f6;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    margin-right:5px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    border-radius:4px;
+    cursor:pointer;
 }
