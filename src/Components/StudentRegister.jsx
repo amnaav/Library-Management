@@ -2,7 +2,8 @@
 import { useState } from "react"
 import "../Styles/StudentLogin.css"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import { auth } from "../Firebase"
+import { auth, db } from "../Firebase"
+import { doc, setDoc } from "firebase/firestore"
 
 const StudentRegister = () => {
     const[username,setUsername]=useState("")
@@ -13,6 +14,16 @@ const StudentRegister = () => {
         e.preventDefault()
         try{
             const userCredential = await createUserWithEmailAndPassword(auth,email,password)
+            const user=userCredential.user
+            await setDoc(doc(db,"Registration",user.uid),{
+                Username:username,
+                Email:email,
+                Department:department,
+                Role:"student"
+            })
+            alert("Registered successfully")
+        }catch(e){
+            alert(e.message)
         }
     }
   return (
@@ -20,7 +31,7 @@ const StudentRegister = () => {
             <div className="login-page">
                 <div className="login-box">
                     <h2>Student Register</h2>
-                    <form>
+                    <form onSubmit={register}>
                         <div className="input-group">
                             <label>Username</label>
                             <input type="text" onChange={(e)=>setUsername(e.target.value)} placeholder="Enter your name"/>
