@@ -10,6 +10,8 @@ import ViewBooks from "./Pages/ViewBooks";
 import Students from "./Pages/Students";
 import IssueBooks from "./Pages/IssueBooks";
 import ReturnBook from "./Pages/ReturnBook";
+import BrowseBooks from "./Pages/BrowsBooks";
+import MyIssuedBooks from "./Pages/MyIssuedBooks";
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
         <Route path="/issuebook" element={<IssueBooks/>}/>
         <Route path="/returnbook" element={<ReturnBook/>}/>
         <Route path="/studentdashboard" element={<StudentDashboard/>}/>
+        <Route path="/browsebooks" element={<BrowseBooks/>}/>
+        <Route path="/myissuedbooks" element={<MyIssuedBooks/>}/>
+
       </Routes>
     </BrowserRouter>
   );

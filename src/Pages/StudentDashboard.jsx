@@ -12,8 +12,8 @@ const StudentDashboard = () => {
         <h2 className='sidebar-logo'>📚 LMS</h2>
         <ul className='sidebar-menu'>
             <li><a href='/studentdashboard'>📊 Dashboard</a></li>
-            <li>📚 Browse Books</li>
-            <li>📖 My Issued Books</li>
+            <li><a href='/browsebooks'>📚 Browse Books</a></li>
+            <li><a href='myissuedbooks'>📖 My Issued Books</a></li>
             <li>↩ Return Books</li>
             <li>👤 Profile</li>
             <li onClick={logout}>🚪 Logout</li>

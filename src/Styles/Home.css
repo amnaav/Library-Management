@@ -75,6 +75,7 @@ body{
 .student-btn{
     background:white;
     border: none;
+    color: black;
     padding:10px 15px;
     cursor: pointer;
     text-decoration: none;
