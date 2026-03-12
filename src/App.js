@@ -13,6 +13,7 @@ import ReturnBook from "./Pages/ReturnBook";
 import BrowseBooks from "./Pages/BrowsBooks";
 import MyIssuedBooks from "./Pages/MyIssuedBooks";
 import Profile from "./Pages/Profile";
+import ReturnBookStudent from "./Pages/ReturnBookStudent";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/studentdashboard" element={<StudentDashboard/>}/>
         <Route path="/browsebooks" element={<BrowseBooks/>}/>
         <Route path="/myissuedbooks" element={<MyIssuedBooks/>}/>
+        <Route path="/returnbooks" element={<ReturnBookStudent/>}/>
         <Route path="/profile" element={<Profile/>}/>
 
       </Routes>

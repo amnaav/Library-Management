@@ -13,9 +13,9 @@ const MyIssuedBooks = () => {
         <ul className='sidebar-menu'>
             <li><a href='/studentdashboard'>📊 Dashboard</a></li>
             <li><a href='/browsebooks'>📚 Browse Books</a></li>
-            <li><a href='myissuedbooks'>📖 My Issued Books</a></li>
-            <li>↩ Return Books</li>
-            <li>👤 Profile</li>
+            <li><a href='/myissuedbooks'>📖 My Issued Books</a></li>
+            <li><a href='/returnbooks'>↩ Return Books</a></li>
+            <li><a href='/profile'>👤 Profile</a></li>
             <li onClick={logout}>🚪 Logout</li>
         </ul>
       </div>

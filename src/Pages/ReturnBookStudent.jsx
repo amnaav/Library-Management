@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import "../Styles/profile.css";
+import "../Styles/Dashboard.css";
 
-const Profile = () => {
+const ReturnBookStudent = () => {
 
   const navigate = useNavigate();
   const logout = () => (
@@ -25,11 +25,26 @@ const Profile = () => {
 
       <div className="main-content">
 
-        <h1>Student Profile</h1>
+        <h1>Return Books</h1>
 
-        <div className="dash-card">
+        <table className="book-table">
 
-        </div>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Book</th>
+              <th>Author</th>
+              <th>Issue Date</th>
+              <th>Return Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+          </tbody>
+
+        </table>
 
       </div>
 
@@ -37,4 +52,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ReturnBookStudent;
