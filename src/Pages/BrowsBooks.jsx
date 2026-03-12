@@ -44,6 +44,7 @@ const BrowseBooks = () => {
               <th>Book Title</th>
               <th>Author</th>
               <th>Category</th>
+              <th>Quantity</th>
               <th>Action</th>
             </tr>
           </thead>
