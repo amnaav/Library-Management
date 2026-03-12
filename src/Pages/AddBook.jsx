@@ -1,6 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/AddBook.css";
+import { useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../Firebase";
 const AddBook = () => {
+    const[name,setName]=useState("")
+    const[author,setAuthor]=useState("")
+    const[category,setCategory]=useState("")
+    const[quantity,setQuantity]=useState("")
+    const addbook = async(e) => {
+        e.preventDefault()
+        try{
+            await addDoc(collection(db,'Book'),{
+                Name:name,
+                Author:author,
+                Category:category,
+                Quantity:Number(quantity)
+            })
+            alert("Book added successfully")
+        }catch(e){
+            alert(e.message)
+        }
+    }
     const navigate = useNavigate()
     const logout = () => (
         navigate('/')
@@ -24,12 +45,11 @@ const AddBook = () => {
                 <h1>Add New Book</h1>
                 <div className="form-container">
                     <form className="add-book-form">
-                        <input type="text" placeholder="Book Title" required/>
-                        <input type="text" placeholder="Author Name" required/>
-                        <input type="text" placeholder="Category" required/>
-                        <input type="text" placeholder="Quantity" required/>
-                        <input type="text" placeholder="Book Image URL"/>
-                        <button type="submit">Add Book</button>
+                        <input type="text" onChange={(e)=>setName(e.target.value)} placeholder="Book Title" required/>
+                        <input type="text" onChange={(e)=>setAuthor(e.target.value)} placeholder="Author Name" required/>
+                        <input type="text" onChange={(e)=>setCategory(e.target.value)} placeholder="Category" required/>
+                        <input type="text" onChange={(e)=>setQuantity(e.target.value)} placeholder="Quantity" required/>
+                        <button type="submit" onClick={addbook}>Add Book</button>
                     </form>
                 </div>
             </div>

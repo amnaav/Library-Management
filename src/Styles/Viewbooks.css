@@ -53,6 +53,9 @@
     background:#1f2937;
     color:white;
 }
+.book-table td{
+    color:black;
+}
 
 .edit-btn{
     background:#3b82f6;

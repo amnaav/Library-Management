@@ -1,11 +1,26 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/Viewbooks.css";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../Firebase";
 
 const ViewBooks = () => {
   const navigate = useNavigate()
     const logout = () => (
         navigate('/')
     )
+    const[books,setBooks]=useState([])
+    const fetchBooks = async () =>{
+      const querySnapshot=await getDocs(collection(db,"Book"));
+      const data = querySnapshot.docs.map(doc=> ({
+        id:doc.id,
+        ...doc.data()
+      }));
+      setBooks(data);
+    }
+    useEffect(() =>{
+      fetchBooks();
+    },[]);
   return (
     <div className="admin-container">
 
@@ -39,6 +54,17 @@ const ViewBooks = () => {
               <th>Actions</th>
             </tr>
           </thead>
+          <tbody>
+          {books.map((book,index)=>(
+            <tr key={book.id}>
+              <td>{index + 1}</td>
+              <td>{book.Name}</td>
+              <td>{book.Author}</td>
+              <td>{book.Category}</td>
+              <td>{book.Quantity}</td>
+            </tr>
+          ))}
+          </tbody>
         </table>
 
       </div>
