@@ -14,6 +14,7 @@ import BrowseBooks from "./Pages/BrowsBooks";
 import MyIssuedBooks from "./Pages/MyIssuedBooks";
 import Profile from "./Pages/Profile";
 import ReturnBookStudent from "./Pages/ReturnBookStudent";
+import Edit from "./Pages/Edit";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/admindashboard" element={<AdminDashboard/>}/>
         <Route path="/addbook" element={<AddBook/>}/>
         <Route path="/viewbooks" element={<ViewBooks/>}/>
+        <Route path="/editbook/:id" element={<Edit/>}/>
         <Route path="/students" element={<Students/>}/>
         <Route path="/issuebook" element={<IssueBooks/>}/>
         <Route path="/returnbook" element={<ReturnBook/>}/>

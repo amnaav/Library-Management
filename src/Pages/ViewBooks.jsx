@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/Viewbooks.css";
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
 
 const ViewBooks = () => {
@@ -21,6 +21,16 @@ const ViewBooks = () => {
     useEffect(() =>{
       fetchBooks();
     },[]);
+    const editBook = (id) =>{
+      navigate(`/editbook/${id}`)
+    }
+    const deleteBook = async(id)=>{
+      const confirmDelete = window.confirm('Are you sure want to delete this book?')
+      if(confirmDelete){
+        await deleteDoc(doc(db,"Book",id))
+        fetchBooks()
+      }
+    }
   return (
     <div className="admin-container">
 
@@ -62,6 +72,8 @@ const ViewBooks = () => {
               <td>{book.Author}</td>
               <td>{book.Category}</td>
               <td>{book.Quantity}</td>
+              <td><button className="edit-btn" onClick={()=>editBook(book.id)}>Edit</button>
+                  <button className="delete-btn" onClick={()=>deleteBook(book.id)}>Delete</button></td>
             </tr>
           ))}
           </tbody>
