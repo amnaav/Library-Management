@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../Styles/Dashboard.css";
+import '../Styles/BrowseBooks.css'
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
@@ -29,7 +29,6 @@ const BrowseBooks = () => {
             <li><a href='/studentdashboard'>📊 Dashboard</a></li>
             <li><a href='/browsebooks'>📚 Browse Books</a></li>
             <li><a href='/myissuedbooks'>📖 My Issued Books</a></li>
-            <li><a href='/returnbooks'>↩ Return Books</a></li>
             <li><a href='/profile'>👤 Profile</a></li>
             <li onClick={logout}>🚪 Logout</li>
         </ul>
