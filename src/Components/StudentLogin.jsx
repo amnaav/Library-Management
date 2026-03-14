@@ -1,9 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
-import "../Styles/StudentLogin.css"
 import { useState } from "react"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { doc, getDoc } from "firebase/firestore"
 import { auth, db } from "../Firebase"
+import '../Styles/StudentLogin.css'
+
 
 const StudentLogin = () => {
     const[email,setEmail]=useState("")

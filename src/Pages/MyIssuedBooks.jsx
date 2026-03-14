@@ -1,17 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import '../Styles/MyIssuedBooks.css'
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../Firebase";
-const MyIssuedBooks = () => {
+import '../Styles/MyIssuedBook.css'
 
-  const[books,setBooks]=useState([])
-  const navigate= useNavigate();
-  const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user)
+const MyissuedBooks = () => {
+
+  const [books,setBooks] = useState([])
+  const navigate = useNavigate()
+
+  const user = JSON.parse(localStorage.getItem("user"))
+
   useEffect(()=>{
     fetchBooks()
   },[])
+
   const fetchBooks = async () => {
 
     if(!user){
@@ -21,63 +24,77 @@ const MyIssuedBooks = () => {
 
     const q = query(
       collection(db,"BorrowedBooks"),
-      where("studentEmail","==",user.email),
-      where("status","==","Issued")
+      where("studentEmail","==",user.email)
     )
 
     const snap = await getDocs(q)
 
     setBooks(
-      snap.docs.map(d=>({
+      snap.docs.map(d => ({
         id:d.id,
         ...d.data()
       }))
     )
   }
-    const logout = () => (
-      navigate('/')
-    )
+
+  const logout = () =>{
+    localStorage.removeItem("user")
+    navigate("/")
+  }
+
   return (
     <div className="admin-container">
+
       <div className="sidebar">
         <h2 className="sidebar-logo">📚 LMS</h2>
 
-        <ul className='sidebar-menu'>
-            <li><a href='/studentdashboard'>📊 Dashboard</a></li>
-            <li><a href='/browsebooks'>📚 Browse Books</a></li>
-            <li><a href='/myissuedbooks'>📖 My Issued Books</a></li>
-            <li><a href='/profile'>👤 Profile</a></li>
-            <li onClick={logout}>🚪 Logout</li>
+        <ul className="sidebar-menu">
+          <li><a href="/Studentdashboard">Dashboard</a></li>
+          <li><a href="/Browsebooks">Browse books</a></li>
+          <li><a href="/Myissuedbooks">My issued books</a></li>
+          <li><a href="/Profile">Profile</a></li>
+          <li onClick={logout}>Logout</li>
         </ul>
       </div>
+
       <div className="main-content">
 
         <h1>My Issued Books</h1>
 
-        <table className="book-table">
-            <thead>
+        <table className="booking-table">
+          <thead>
+            <tr>
+              <th>Book Name</th>
+              <th>Issue Date</th>
+              <th>Status</th>
+              <th>Returned Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            {books.length === 0 ? (
               <tr>
-                <th>Book Name</th>
-                <th>Issue Date</th>
+                <td colSpan="4">No issued books</td>
               </tr>
-            </thead>
-            <tbody>
-              {books.map(b=>(
+            ) : (
+              books.map(b => (
                 <tr key={b.id}>
                   <td>{b.bookName}</td>
                   <td>{b.borrowDate}</td>
+                  <td>{b.status}</td>
+                  <td>{b.returnDate ? b.returnDate : "Not Returned"}</td>
                 </tr>
-              ))}
-            </tbody>
+              ))
+            )}
+
+          </tbody>
         </table>
 
       </div>
 
     </div>
-  );
-};
+  )
+}
 
-export default MyIssuedBooks;
-
-
-
+export default MyissuedBooks

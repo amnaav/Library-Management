@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../Styles/Viewbooks.css";
+import '../Styles/ViewBooks.css'
 import { useEffect, useState } from "react";
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
@@ -38,13 +38,13 @@ const ViewBooks = () => {
         <h2 className="sidebar-logo">📚 LMS</h2>
 
         <ul className="sidebar-menu">
-            <li><a href='/admindashboard'>📊Dashboard</a></li>
-            <li><a href='/addbook'>📚Add Books</a></li>
-            <li><a href='/viewbooks'>📖View Books</a></li>
-            <li><a href='/students'>👥Students</a></li>
-            <li><a href='/issuebook'>📕Issue Books</a></li>
-            <li><a href='/returnbook'>↩Return Book</a></li>
-            <li onClick={logout}>🚪Logout</li>
+            <li><a href='/admindashboard'>Dashboard</a></li>
+            <li><a href='/addbook'>Add Books</a></li>
+            <li><a href='/viewbooks'>View Books</a></li>
+            <li><a href='/students'>Students</a></li>
+            <li><a href='/issuebook'>Issue Books</a></li>
+            <li><a href='/returnbook'>Return Book</a></li>
+            <li onClick={logout}>Logout</li>
         </ul>
       </div>
 

@@ -1,6 +1,5 @@
-
+import '../Styles/StudentRegister.css'
 import { useState } from "react"
-import "../Styles/StudentLogin.css"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth, db } from "../Firebase"
 import { doc, setDoc } from "firebase/firestore"

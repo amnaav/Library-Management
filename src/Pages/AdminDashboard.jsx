@@ -1,9 +1,8 @@
 import {useNavigate } from "react-router-dom";
-import '../Styles/AdminDashboard.css'
-import "../Styles/AddBook.css";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
+import '../Styles/AdminDashboard.css'
 
 const AdminDashboard = () => {
     const navigate = useNavigate()
@@ -38,36 +37,38 @@ const AdminDashboard = () => {
       <div className="sidebar">
         <h2 className="sidebar-logo">📚 LMS</h2>
         <ul className="sidebar-menu">
-            <li><a href='/admindashboard'>📊Dashboard</a></li>
-            <li><a href='/addbook'>📚Add Books</a></li>
-            <li><a href='/viewbooks'>📖View Books</a></li>
-            <li><a href='/students'>👥Students</a></li>
-            <li><a href='/issuebook'>📕Issue Books</a></li>
-            <li><a href='/returnbook'>↩Return Book</a></li>
-            <li onClick={logout}>🚪Logout</li>
+            <li><a href='/admindashboard'>Dashboard</a></li>
+            <li><a href='/addbook'>Add Books</a></li>
+            <li><a href='/viewbooks'>View Books</a></li>
+            <li><a href='/students'>Students</a></li>
+            <li><a href='/issuebook'>Issue Books</a></li>
+            <li><a href='/returnbook'>Return Book</a></li>
+            <li onClick={logout}>Logout</li>
         </ul>
       </div>
       <div className="main-content">
         <h1>Admin Dashboard</h1>
-        <div className="dash-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="books"/>
-            <div>
-                <h3>Total Books</h3>
-                <p>{bookCount}</p>
+        <div className="dashboard-cards">
+            <div className="dash-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="books"/>
+                <div>
+                    <h3>Total Books</h3>
+                    <p>{bookCount}</p>
+                </div>
             </div>
-        </div>
-        <div className="dash-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="students"/>
-            <div>
-                <h3>Total Students</h3>
-                <p>{studentCount}</p>
+            <div className="dash-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="students"/>
+                <div>
+                    <h3>Total Students</h3>
+                    <p>{studentCount}</p>
+                </div>
             </div>
-        </div>
-        <div className="dash-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="issued"/>
-            <div>
-                <h3>Issued Books</h3>
-                <p>{issuedCount}</p>
+            <div className="dash-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="issued"/>
+                <div>
+                    <h3>Issued Books</h3>
+                    <p>{issuedCount}</p>
+                </div>
             </div>
         </div>
       </div>

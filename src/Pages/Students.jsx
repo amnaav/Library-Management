@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import "../Styles/Students.css";
 import React from 'react'
 
 const Students = () => {
@@ -12,13 +11,13 @@ const Students = () => {
       <div className="sidebar">
         <h2 className="sidebar-logo">📚 LMS</h2>
         <ul className="sidebar-menu">
-            <li><a href='/admindashboard'>📊Dashboard</a></li>
-            <li><a href='/addbook'>📚Add Books</a></li>
-            <li><a href='/viewbooks'>📖View Books</a></li>
-            <li><a href='/students'>👥Students</a></li>
-            <li><a href='/issuebook'>📕Issue Books</a></li>
-            <li><a href='/returnbook'>↩Return Book</a></li>
-            <li onClick={logout}>🚪Logout</li>
+            <li><a href='/admindashboard'>Dashboard</a></li>
+            <li><a href='/addbook'>Add Books</a></li>
+            <li><a href='/viewbooks'>View Books</a></li>
+            <li><a href='/students'>Students</a></li>
+            <li><a href='/issuebook'>Issue Books</a></li>
+            <li><a href='/returnbook'>Return Book</a></li>
+            <li onClick={logout}>Logout</li>
         </ul>
       </div>
       <div className="main-content">

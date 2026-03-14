@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import "../Styles/AddBook.css";
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../Firebase";
+import '../Styles/AddBook.css'
 const AddBook = () => {
     const[name,setName]=useState("")
     const[author,setAuthor]=useState("")
@@ -32,13 +32,13 @@ const AddBook = () => {
             <div className="sidebar">
                 <h2 className="sidebar-logo">📚 LMS</h2>
                 <ul className="sidebar-menu">
-                    <li><a href='/admindashboard'>📊Dashboard</a></li>
-                    <li><a href='/addbook'>📚Add Books</a></li>
-                    <li><a href='/viewbooks'>📖View Books</a></li>
-                    <li><a href='/students'>👥Students</a></li>
-                    <li><a href='/issuebook'>📕Issue Books</a></li>
-                    <li><a href='/returnbook'>↩Return Book</a></li>
-                    <li onClick={logout}>🚪Logout</li>
+                    <li><a href='/admindashboard'>Dashboard</a></li>
+                    <li><a href='/addbook'>Add Books</a></li>
+                    <li><a href='/viewbooks'>View Books</a></li>
+                    <li><a href='/students'>Students</a></li>
+                    <li><a href='/issuebook'>Issue Books</a></li>
+                    <li><a href='/returnbook'>Return Book</a></li>
+                    <li onClick={logout}>Logout</li>
                 </ul>
             </div>
             <div className="main-content">

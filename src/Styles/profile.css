@@ -1,48 +1,37 @@
-.admin-container{
-    display:flex;
-    height: 100vh;
-    text-align: center;
+.profile-container{
+    padding:40px;
 }
-.sidebar{
-    width: 220px;
-    background:#1f2937 ;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    height: 100vh;
-}
-.sidebar-logo{
+
+h2{
     text-align:center;
-    margin-bottom:30px;
 }
-.sidebar-menu{
-    list-style: none;
-    padding: 0;
+
+.profile-card{
+    width:350px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,0.15);
 }
-.sidebar-menu li{
-    padding: 12px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
+
+/* Avatar circle */
+.avatar{
+    width:70px;
+    height:70px;
+    background:#4CAF50;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px auto;
 }
-.sidebar-menu li:hover{
-    background: #374151;
-}
-.main-content{
-    flex:1;
-    padding: 40px;
-    background: #f4f4f4;
-    margin-left: 260px;
-}
-.dash-card{
-    background: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-.dash-card:hover{
-    transform: translateY(-5px);
+
+.profile-card p{
+    font-size:16px;
+    margin:10px 0;
 }

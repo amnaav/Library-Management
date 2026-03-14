@@ -2,7 +2,6 @@ import { doc, getDoc, updateDoc } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import {  useNavigate, useParams } from 'react-router-dom'
 import { db } from '../Firebase'
-import '../Styles/Edit.css'
 
 const Edit = () => {
     const[name,setName]=useState("")
@@ -46,13 +45,13 @@ const Edit = () => {
             <div className="sidebar">
                 <h2 className="sidebar-logo">📚 LMS</h2>
                 <ul className="sidebar-menu">
-                    <li><a href='/admindashboard'>📊Dashboard</a></li>
-                    <li><a href='/addbook'>📚Add Books</a></li>
-                    <li><a href='/viewbooks'>📖View Books</a></li>
-                    <li><a href='/students'>👥Students</a></li>
-                    <li><a href='/issuebook'>📕Issue Books</a></li>
-                    <li><a href='/returnbook'>↩Return Book</a></li>
-                    <li onClick={logout}>🚪Logout</li>
+                    <li><a href='/admindashboard'>Dashboard</a></li>
+                    <li><a href='/addbook'>Add Books</a></li>
+                    <li><a href='/viewbooks'>View Books</a></li>
+                    <li><a href='/students'>Students</a></li>
+                    <li><a href='/issuebook'>Issue Books</a></li>
+                    <li><a href='/returnbook'>Return Book</a></li>
+                    <li onClick={logout}>Logout</li>
                 </ul>
             </div>
             <div className="main-content">

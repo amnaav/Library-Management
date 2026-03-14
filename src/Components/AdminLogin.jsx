@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import "../Styles/StudentLogin.css"
+import '../Styles/AdminLogin.css'
 import { useState } from "react"
 
 const AdminLogin = () => {

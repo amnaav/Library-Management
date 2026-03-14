@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
-import '../Styles/StudentDashboard.css'
 import { auth, db } from '../Firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import { onAuthStateChanged } from 'firebase/auth'
 import { useEffect, useState } from 'react'
+import '../Styles/StudentDashboard.css'
 
 const StudentDashboard = () => {
 
@@ -51,18 +51,17 @@ const StudentDashboard = () => {
         <h2 className='sidebar-logo'>📚 LMS</h2>
 
         <ul className='sidebar-menu'>
-            <li><a href='/studentdashboard'>📊 Dashboard</a></li>
-            <li><a href='/browsebooks'>📚 Browse Books</a></li>
-            <li><a href='/myissuedbooks'>📖 My Issued Books</a></li>
-            <li><a href='/profile'>👤 Profile</a></li>
-            <li onClick={logout}>🚪 Logout</li>
+            <li><a href='/studentdashboard'>Dashboard</a></li>
+            <li><a href='/browsebooks'>Browse Books</a></li>
+            <li><a href='/myissuedbooks'>My Issued Books</a></li>
+            <li><a href='/profile'>Profile</a></li>
+            <li onClick={logout}>Logout</li>
         </ul>
       </div>
 
       <div className='main-content'>
 
         <h1>Student Dashboard</h1>
-
         <div className='dashboard-cards'>
 
             <div className='dash-card'>
@@ -82,7 +81,6 @@ const StudentDashboard = () => {
                 <h3>Returned Books</h3>
                 <p>{returned}</p>
             </div>
-
         </div>
 
       </div>

@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import '../Styles/BrowseBooks.css'
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
@@ -26,11 +25,11 @@ const BrowseBooks = () => {
       <div className="sidebar">
         <h2 className="sidebar-logo">📚 LMS</h2>
         <ul className='sidebar-menu'>
-            <li><a href='/studentdashboard'>📊 Dashboard</a></li>
-            <li><a href='/browsebooks'>📚 Browse Books</a></li>
-            <li><a href='/myissuedbooks'>📖 My Issued Books</a></li>
-            <li><a href='/profile'>👤 Profile</a></li>
-            <li onClick={logout}>🚪 Logout</li>
+            <li><a href='/studentdashboard'>Dashboard</a></li>
+            <li><a href='/browsebooks'>Browse Books</a></li>
+            <li><a href='/myissuedbooks'>My Issued Books</a></li>
+            <li><a href='/profile'>Profile</a></li>
+            <li onClick={logout}>Logout</li>
         </ul>
       </div>
       <div className="main-content">
