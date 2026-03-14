@@ -17,6 +17,12 @@ const StudentLogin = () => {
             const docRef=doc(db,"Registration",user.uid);
             const docSnap = await getDoc(docRef);
             if(docSnap.exists()){
+                const studentData=docSnap.data()
+                localStorage.setItem("user",JSON.stringify({
+                    email:studentData.Email,
+                    name:studentData.Username,
+                    uid:user.uid
+                }))
                 navigate('/studentdashboard')
             }
             else{

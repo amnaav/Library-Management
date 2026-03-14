@@ -1,75 +1,82 @@
 .admin-container{
-    display:flex;
-    height: 100vh;
-    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .sidebar{
     width: 220px;
-    background:#1f2937 ;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    height: 100vh;
+    background:#1f2937;
+    color:white;
+    padding:20px;
+    position:fixed;
+    height:100vh;
 }
 .sidebar-logo{
     text-align:center;
     margin-bottom:30px;
+    font-size:22px;
 }
 .sidebar-menu{
-    list-style: none;
-    padding: 0;
+    list-style:none;
+    padding:0;
 }
 .sidebar-menu li{
-    padding: 12px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
 }
 .sidebar-menu li a{
-    text-decoration: none;
-    color: white;
+    text-decoration:none;
+    color:white;
+    display:block;
 }
 .sidebar-menu li:hover{
-    background: #374151;
+    background:#374151;
 }
 .main-content{
     flex:1;
-    padding: 40px;
-    background: #f4f4f4;
-    margin-left: 260px;
+    margin-left:240px;
+    padding:40px;
+    background:#f4f4f4;
+    min-height:100vh;
+}
+.main-content h2{
+    text-align:center;
+    margin-bottom:25px;
 }
 .form-container{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .add-book-form{
-    background: white;
-    padding: 30px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background:white;
+    padding:30px;
+    width:380px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 .add-book-form select{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.add-book-form input{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:14px;
 }
 .add-book-form button{
-    padding: 12px;
-    background: #ff8c2b;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+    padding:12px;
+    background:#ff8c2b;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+.add-book-form button:hover{
+    background:#e67618;
 }

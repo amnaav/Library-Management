@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../Styles/Dashboard.css";
 import { useEffect, useState } from "react";
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
 
 const BrowseBooks = () => {
@@ -57,6 +57,10 @@ const BrowseBooks = () => {
               <td>{book.Author}</td>
               <td>{book.Category}</td>
               <td>{book.Quantity}</td>
+              <td>{book.Quantity>0?(
+                <span>Available</span>):(
+                  <span>Unavailable</span>
+              )}</td>
             </tr>
           ))}
           </tbody>
