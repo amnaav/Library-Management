@@ -1,7 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {collection, doc, getDocs } from "firebase/firestore";
+import { db } from "../Firebase";
 
 const Students = () => {
+  const[student,setStudent]=useState([])
+  useEffect(()=>{
+    fetchStudent()
+  })
+  const fetchStudent = async() =>{
+    const snap = await getDocs(collection(db,'Registration'))
+    const list = snap.docs.map(doc => ({
+      id:doc.id,
+      ...doc.data()
+    }))
+    setStudent(list)
+  }
   const navigate = useNavigate()
     const logout = () => (
         navigate('/')
@@ -25,13 +39,22 @@ const Students = () => {
         <table className="book-table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Course</th>
-                    <th>Action</th>
+                    <th>Role</th>
                 </tr>
             </thead>
+            <tbody>
+              {student.map(a=>(
+                <tr key={a.id}>
+                  <td>{a.Username}</td>
+                  <td>{a.Email}</td>
+                  <td>{a.Department}</td>
+                  <td>{a.Role}</td>
+                </tr>
+              ))}
+            </tbody>
         </table>
       </div>
     </div>

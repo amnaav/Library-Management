@@ -35,51 +35,24 @@
     background: #f4f4f4;
     margin-left: 260px;
 }
-/* TABLE */
-
 .booking-table{
     width:100%;
-    border-collapse:collapse;
+    border-collapse: collapse;
+    margin-top: 30px;
     background:white;
-    margin-top:25px;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-
-/* HEADER */
-
-.booking-table thead{
-    background:#1f2937;
-    color:white;
+.booking-table th,
+.booking-table td{
+    padding: 12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
 }
 
 .booking-table th{
-    padding:14px;
-    text-align:left;
+    background:#1f2937;
+    color:white;
 }
-
-
-/* BODY */
-
-.booking-table td{
-    padding:12px;
-    border-bottom:1px solid #eee;
-}
-
-
-/* ROW HOVER */
-
-.booking-table tbody tr:hover{
-    background:#f9fafb;
-}
-
-
-/* NO DATA ROW */
-
-.booking-table td[colspan]{
-    text-align:center;
-    padding:20px;
-    font-weight:500;
+.book-table td{
+    color:black;
 }

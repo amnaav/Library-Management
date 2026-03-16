@@ -1,128 +1,98 @@
+import React from "react";
+import '../Styles/Home.css';
 import { Link } from "react-router-dom";
-import "../Styles/Home.css";
 
+function Home() {
+    return (
+        <div className="home-container">
+            {/* Navigation */}
+            <nav className="navbar">
+                <div className='logo'>
+                    <span className="logo-icon">📚</span>
+                    <h2>Libre<span>Flow</span></h2>
+                </div>
+                <ul className="nav-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#books">Books</a></li>
+                </ul>
+                <div className="nav-auth">
+                    <Link to='/Adminlogin' className="register-btn">Admin</Link>
+                    <Link to="/Studentregister" className="register-btn">Get Started</Link>
+                </div>
+            </nav>
 
-const Home = () => {
-  return (
-    <div>
-      <nav className="navbar">
-        <div className="logo">📚Library LMS</div>
+            {/* Hero Section */}
+            <header className="hero-section">
+                <div className="hero-content">
+                   
+                    <h1>Your Digital Gateway to <span>Knowledge</span></h1>
+                    <p>Streamline borrowing, automate tracking, and empower your learning journey with our integrated smart platform.</p>    
+                    <div className="hero-buttons">
+                        <button className="btn-primary">Browse Library</button>
+                        <Link to='/Studentlogin' className="btn-secondary">Student Login</Link>
+                    </div>
+                </div>
+            </header>
 
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#feature">Features</a></li>
-          <li><a href="#books">Books</a></li>
-          <li><Link to="/adminlogin">Admin Login</Link></li>
-          <li><Link to="/studentlogin">Student Login</Link></li>
-        </ul>
+            {/* Stats Dashboard */}
+            <section className="stats-container">
+                <div className="stat-card">
+                    <h3>5000+</h3>
+                    <p>Total Titles</p>
+                </div>
+                <div className="stat-card">
+                    <h3>1200+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div className="stat-card">
+                    <h3>350+</h3>
+                    <p>Daily Issues</p>
+                </div>
+                <div className="stat-card">
+                    <h3>50+</h3>
+                    <p>Subject Areas</p>
+                </div>
+            </section>
 
-        <Link to="/studentregister" className="register-btn">Register</Link>
-      </nav>
+            {/* Features */}
+            <section className="features-section" id="feature">
+                <div className="section-header">
+                    <h2>Advanced Capabilities</h2>
+                    <p>Everything you need to manage a modern library.</p>
+                </div>
+                <div className="features-grid">
+                    <div className="feature-card">
+                        <div className="icon">🔍</div>
+                        <h3>Smart Search</h3>
+                        <p>Instant filtering by ISBN, Author, or Genre.</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="icon">🔄</div>
+                        <h3>Digital Workflow</h3>
+                        <p>One-click book issuing and contactless returns.</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="icon">📊</div>
+                        <h3>Real-time Analytics</h3>
+                        <p>Detailed insights into library circulation.</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="icon">💳</div>
+                        <h3>Automated Fines</h3>
+                        <p>System-generated alerts for overdue items.</p>
+                    </div>
+                </div>
+            </section>
 
-      <section className="hero" id="home">
-        <div className="hero-content">
-          <h1>Digital Library Platform</h1>
-
-          <p>
-            Discover thousands of books, manage borrowing, and experience a
-            smart digital library.
-          </p>
-
-          <div className="hero-buttons">
-            <button className="browse-btn">Browse books</button>
-            <Link to="/studentlogin" className="student-btn">Student Login</Link>
-          </div>
+            {/* Footer */}
+            <footer className="footer-cta">
+                <h2>Ready to digitize your library?</h2>
+                <p>Join over 1,000 institutions worldwide.</p>
+                <button className="btn-primary">Register Now</button>
+            </footer>
         </div>
-      </section>
-      <section className='stats'id ="stats">
-        <div className="stat">
-          📚
-          <h2>5000+</h2>
-          <p>Books Available</p>
-        </div>
-
-        <div className="stat">
-          👩‍🎓
-          <h2>1200+</h2>
-          <p>Students</p>
-        </div>
-
-        <div className="stat">
-          👨‍💻
-          <h2>350+</h2>
-          <p>Daily Readers</p>
-        </div>
-
-        <div className="stat">
-          📘
-          <h2>50+</h2>
-          <p>Categories</p>
-        </div>
-      </section>
-      <section className='features' id ="feature">
-        <h2>Library Features</h2>
-          <div className='feature-grid'>
-            <div className='feature-card'>
-              📚
-              <h3>Smart Book Search</h3>
-              <p>Find books by title,author, and category.</p>
-            </div>
-            <div className='feature-card'>
-              🔄
-              <h3>Easy Issue & Return</h3>
-              <p>Issue and return books digitally.</p>
-            </div>
-            <div className='feature-card'>
-              📊
-              <h3>Admin Dashboard</h3>
-              <p>Monitor library activities & reports.</p>
-            </div>
-            <div className="feature-card">
-            💰
-            <h3>Fine Management</h3>
-            <p>Automated overdue fine tracking.</p>
-          </div>
-        </div>
-      </section>
-      <section className='categories'id ="categories">
-        <h2>Book Categories</h2>
-        <div className='category-grid'>
-          <div className='cat blue'>Programming</div>
-          <div className='cat green'>science</div>
-          <div className='cat red'>Technology</div>
-          <div className='cat yellow'>History</div>
-          <div className='cat purple'>Education</div>
-          <div className='cat orange'>Mathematics</div>
-        </div>
-      </section>
-      <section className='books'id ="books">
-        <h2>Popular Books</h2>
-        <div className='book-grid'>
-          <div className="book-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"/>
-            <h4>React Development</h4>
-          </div>
-          <div className="book-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"/>
-            <h4>Data Structures</h4>
-          </div>
-          <div className="book-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"/>
-            <h4>Machine Learning</h4>
-          </div>
-          <div className="book-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"/>
-            <h4>Artificial Intelligence</h4>
-          </div>
-        </div>
-      </section>
-      <section className='cta'>
-        <h2>Start Your Learning Journey Today</h2>
-        <p>Join our digital library and explore unlimited books</p>
-        <Link to="/studentregister" className="cta-btn">Register Now</Link>
-      </section>
-    </div>
-  );
-};
+    );
+}
 
 export default Home;
