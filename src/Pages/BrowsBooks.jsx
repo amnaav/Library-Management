@@ -9,6 +9,7 @@ const BrowseBooks = () => {
       navigate('/')
     )
     const[books,setBooks]=useState([])
+    const[search,setSearch]=useState("")
     const fetchBooks= async () =>{
       const querySnapshot= await getDocs(collection (db,"Book"));
       const data = querySnapshot.docs.map(doc =>({
@@ -17,6 +18,9 @@ const BrowseBooks = () => {
       }));
       setBooks(data);
     }
+    const filterBooks=books.filter(book=>
+      book.Name.toLowerCase().includes(search.toLocaleLowerCase())
+    )
     useEffect(()=>{
       fetchBooks();
     },[])
@@ -34,6 +38,7 @@ const BrowseBooks = () => {
       </div>
       <div className="main-content">
         <h1>Browse Books</h1>
+        <input type="text" placeholder="Search Books" value={search} onChange={(e)=>setSearch(e.target.value)}></input>
         <table className="book-table">
 
           <thead>
@@ -48,7 +53,7 @@ const BrowseBooks = () => {
           </thead>
 
           <tbody>
-            {books.map((book,index)=>(
+            {filterBooks.map((book,index)=>(
             <tr key={book.id}>
               <td>{index + 1}</td>
               <td>{book.Name}</td>
