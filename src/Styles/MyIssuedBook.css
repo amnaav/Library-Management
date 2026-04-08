@@ -56,3 +56,21 @@
 .book-table td{
     color:black;
 }
+.main-content input[type="text"] {
+    width: 300px;
+    padding: 10px 14px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.main-content input[type="text"]:focus {
+    border-color: #1f2937;
+    box-shadow: 0 0 5px rgba(31, 41, 55, 0.4);
+}
+.main-content input::placeholder {
+    color: #888;
+}

@@ -38,9 +38,15 @@ const BrowseBooks = () => {
       </div>
       <div className="main-content">
         <h1>Browse Books</h1>
-        <input type="text" placeholder="Search Books" value={search} onChange={(e)=>setSearch(e.target.value)}></input>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search Books"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
         <table className="book-table">
-
           <thead>
             <tr>
               <th>ID</th>
