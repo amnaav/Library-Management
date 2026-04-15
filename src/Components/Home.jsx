@@ -61,7 +61,7 @@ function Home() {
                     </p>
 
                     <div className="hero-buttons">
-                        <button className="btn-primary">Browse Library</button>
+                        <Link to='/browsebooks' className="btn-primary">Browse Library</Link>
                         <Link to='/Studentlogin' className="btn-secondary">Student Login</Link>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ function Home() {
             <footer className="footer-cta">
                 <h2>Ready to digitize your library?</h2>
                 <p>Join over 1,000 institutions worldwide.</p>
-                <button className="btn-primary">Register Now</button>
+                <Link to='studentregister' className="btn-primary">Register Now</Link>
             </footer>
 
         </div>

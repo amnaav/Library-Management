@@ -3,6 +3,7 @@ import { useState } from "react"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth, db } from "../Firebase"
 import { doc, setDoc } from "firebase/firestore"
+import { Link } from 'react-router-dom'
 
 const StudentRegister = () => {
     const[username,setUsername]=useState("")
@@ -48,6 +49,7 @@ const StudentRegister = () => {
                             <input type="text" onChange={(e)=>setDepartment(e.target.value)} placeholder="Enter department"/>
                         </div>
                         <button className="login-btn">Register</button>
+                        <p className="login-text">Back to <Link to="/">Home</Link></p>
                     </form>
                 </div>
             </div>
