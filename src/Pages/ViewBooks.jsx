@@ -60,6 +60,7 @@ const ViewBooks = () => {
               <th>Title</th>
               <th>Author</th>
               <th>Category</th>
+              <th>Code</th>
               <th>Quantity</th>
               <th>Actions</th>
             </tr>
@@ -71,6 +72,7 @@ const ViewBooks = () => {
               <td>{book.Name}</td>
               <td>{book.Author}</td>
               <td>{book.Category}</td>
+              <td>{book.bookCode}</td>
               <td>{book.Quantity}</td>
               <td><button className="edit-btn" onClick={()=>editBook(book.id)}>Edit</button>
                   <button className="delete-btn" onClick={()=>deleteBook(book.id)}>Delete</button></td>

@@ -43,6 +43,7 @@ const Students = () => {
                     <th>Email</th>
                     <th>Course</th>
                     <th>Role</th>
+                    <th>Code</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,6 +53,7 @@ const Students = () => {
                   <td>{a.Email}</td>
                   <td>{a.Department}</td>
                   <td>{a.Role}</td>
+                  <td>{a.studentCode}</td>
                 </tr>
               ))}
             </tbody>
