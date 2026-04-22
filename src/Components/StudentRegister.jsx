@@ -12,7 +12,6 @@ const StudentRegister = () => {
     const [password, setPassword] = useState("")
     const [department, setDepartment] = useState("")
 
-    // Better unique code
     const generateStudentCode = () => {
         return "STU-" + Date.now().toString().slice(-6)
     }

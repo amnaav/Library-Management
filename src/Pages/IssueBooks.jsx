@@ -80,7 +80,7 @@ const IssueBooks = () => {
     return (
         <div className="admin-container">
 
-            {/* SIDEBAR */}
+            
             <div className="sidebar">
                 <h2 className="sidebar-logo">📚 LMS</h2>
                 <ul className="sidebar-menu">
@@ -94,7 +94,7 @@ const IssueBooks = () => {
                 </ul>
             </div>
 
-            {/* MAIN */}
+            
             <div className="main-content">
 
                 <div className="page-header">
@@ -104,7 +104,7 @@ const IssueBooks = () => {
 
                 <div className="issue-layout">
 
-                    {/* STUDENT LIST */}
+                    
                     <div className="list-card">
                         <h3>Students</h3>
 
@@ -129,7 +129,7 @@ const IssueBooks = () => {
                         </div>
                     </div>
 
-                    {/* FORM */}
+                    
                     <div className="form-card">
                         <h3>Issue Form</h3>
 
@@ -152,7 +152,7 @@ const IssueBooks = () => {
                         </form>
                     </div>
 
-                    {/* BOOK LIST */}
+                    
                     <div className="list-card">
                         <h3>Books</h3>
 

@@ -23,7 +23,6 @@ const ReturnBook = () => {
             ...doc.data()
         }))
 
-        // ✅ SAFE SORT (no crash)
         data.sort((a, b) => {
             const nameA = (a.studentName || "").toLowerCase()
             const nameB = (b.studentName || "").toLowerCase()
@@ -39,7 +38,6 @@ const ReturnBook = () => {
         const bookSnap = await getDoc(bookRef)
         const bookData = bookSnap.data()
 
-        // ✅ update using STRING date
         const today = new Date()
         const formattedDate = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear()
 
@@ -56,20 +54,17 @@ const ReturnBook = () => {
         fetchBorrowed()
     }
 
-    // ✅ FORMAT DATE (string already)
     const formatDate = (date) => {
         if (!date) return "-"
         return date
     }
 
-    // ✅ CONVERT STRING → DATE
     const convertToDate = (dateStr) => {
         if (!dateStr) return null
         const parts = dateStr.split('/')
         return new Date(parts[2], parts[1] - 1, parts[0])
     }
 
-    // ✅ CHECK OVERDUE
     const isOverdue = (item) => {
         if (!item.returnDate) return false
 
