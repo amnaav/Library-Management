@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { auth, db } from '../Firebase'
-import { collection, doc, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { onAuthStateChanged } from 'firebase/auth'
 import { useEffect, useState } from 'react'
 import '../Styles/StudentDashboard.css'
