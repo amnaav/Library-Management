@@ -13,7 +13,7 @@ const MyissuedBooks = () => {
 
   useEffect(()=>{
     fetchBooks()
-  },[fetchBooks])
+  },[])
 
   const fetchBooks = async () => {
 

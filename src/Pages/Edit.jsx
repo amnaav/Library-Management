@@ -22,7 +22,7 @@ const Edit = () => {
     };
     useEffect(()=>{
         fetchBooks();
-    },[fetchBooks]);
+    },[]);
     const updateBook= async(e) =>{
         e.preventDefault()
         const bookRef=doc(db,"Book",id);
