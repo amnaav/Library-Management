@@ -20,6 +20,7 @@ const Edit = () => {
             setQuantity(data.Quantity);
         }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=>{
         fetchBooks();
     },[]);
